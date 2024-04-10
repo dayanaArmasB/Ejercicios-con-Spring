@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>Spring</title>
+	</head>
+	<body>
+		<h1>Reporte de Promedios</h1>
+		<p>
+			<b>Nombre del alumno: </b>
+			<span th:text="${alu}"></span>
+		</p>
+		
+		<p>
+			<b>Promedio:</b>
+			<span th:text="${prom}"></span>
+		</p>
+		
+		<h1>Imprimir objetos</h1>
+		<p>
+			<b>Nombre: </b>
+			<span th:text="${usuario1.nombre}"></span>
+		</p>
+		
+		<p>
+			<b>Apellido:</b>
+			<span th:text="${usuario1.apellido}"></span>
+		</p>
+		
+		<h1>Lista de usuarios</h1>
+		<table border="1">
+			<thead>
+				<tr>
+					<th>Nombres</th>
+					<th>Apellidos</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="item : ${lista}">
+					<td th:text="${item.nombre}"></td>
+					<td th:text="${item.apellido}"></td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
